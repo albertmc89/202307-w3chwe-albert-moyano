@@ -12,8 +12,7 @@ class AppComponent extends Component {
       <header class="main-header">
         <img src="img/pokemon-logo.svg"/>
       </header>
-      <main class="main">
-        <ul class="pokemon">
+        <ul class="pokemon-list">
         </ul>
       </main>
     `;

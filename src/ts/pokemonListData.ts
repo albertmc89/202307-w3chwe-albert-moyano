@@ -18,7 +18,7 @@ const pokemonListData = async () => {
   const pokeResolvedProfile = pokeListResolved.map((pokeListResolved) => ({
     id: pokeListResolved.id,
     name: pokeListResolved.name,
-    pictureUrl: pokeListResolved.sprites.front_default,
+    pictureUrl: pokeListResolved.sprites.other.dream_world.front_default,
     type: pokeListResolved.types[0].type.name,
   }));
 
