@@ -20,3 +20,8 @@ export interface PokemonResponseData {
   sprites: { front_default: string };
   types: [{ type: { name: string } }];
 }
+
+export interface ComponentStructure {
+  render: () => void;
+  remove: () => void;
+}

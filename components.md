@@ -2,4 +2,5 @@
 
 -AppComponent
 -PokemonCardComponent
+-PokemonListComponent
 -ButtonCoomponent

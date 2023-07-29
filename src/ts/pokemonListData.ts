@@ -6,17 +6,14 @@ const pokemonListData = async () => {
   const { results: listResponse } =
     (await pokemonListDataResponse.json()) as PokemonListResponse;
 
-  console.log(listResponse);
-
   const pokeList = listResponse.map(async (pokemon) => {
     const pokemonResponse = await fetch(pokemon.url);
     const pokemonData = (await pokemonResponse.json()) as PokemonResponseData;
 
     return pokemonData;
   });
-  console.log(pokeList);
+
   const pokeListResolved = await Promise.all(pokeList);
-  console.log(pokeListResolved);
 
   const pokeResolvedProfile = pokeListResolved.map((pokeListResolved) => ({
     id: pokeListResolved.id,
@@ -24,7 +21,8 @@ const pokemonListData = async () => {
     pictureUrl: pokeListResolved.sprites.front_default,
     type: pokeListResolved.types[0].type.name,
   }));
-  console.log(pokeResolvedProfile);
+
+  return pokeResolvedProfile;
 };
 
 export default pokemonListData;
