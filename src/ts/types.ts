@@ -1,5 +1,7 @@
 export interface PokemonListResponse {
   results: Pokemon[];
+  previous: string;
+  next: string;
 }
 
 export interface Pokemon {
