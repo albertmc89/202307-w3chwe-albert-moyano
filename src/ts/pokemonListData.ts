@@ -1,5 +1,5 @@
 import apiUrlPokemonList from "./globals.js";
-import { type PokemonListResponse, type PokemonResponseData } from "./types";
+import { type PokemonListResponse, type PokemonResponseData } from "./types.js";
 
 const pokemonListData = async () => {
   const pokemonListDataResponse = await fetch(apiUrlPokemonList);
