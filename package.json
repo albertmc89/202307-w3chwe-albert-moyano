@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prepare": "husky install",
     "build": "tsc",
-    "build:dev": "tsc -w"
+    "build:dev": "tsc -w",
+    "test": "jest",
+    "test:dev": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
