@@ -1,9 +1,10 @@
-import pokemonListData from "./pokemonListData.js";
+import AppComponent from "./components/AppComponent/AppComponent.js";
 
-pokemonListData()
-  .then((pokeList) => {
-    console.log(pokeList);
-  })
-  .catch((error) => {
-    console.log(error);
-  });
+const appContainer = document.querySelector(".container");
+
+if (!appContainer) {
+  throw new Error("Missing container");
+}
+
+const appComponent = new AppComponent(appContainer);
+appComponent.render();

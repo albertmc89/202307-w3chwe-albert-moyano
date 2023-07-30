@@ -1,4 +1,6 @@
-class Component {
+import { type ComponentStructure } from "../../types";
+
+class Component implements ComponentStructure {
   element: Element;
   constructor(
     private readonly parentElement: Element,

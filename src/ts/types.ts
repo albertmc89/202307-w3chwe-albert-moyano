@@ -17,6 +17,11 @@ export interface PokemonProfile {
 export interface PokemonResponseData {
   id: number;
   name: string;
-  sprites: { front_default: string };
+  sprites: { other: { dream_world: { front_default: string } } };
   types: [{ type: { name: string } }];
+}
+
+export interface ComponentStructure {
+  render: () => void;
+  remove: () => void;
 }
