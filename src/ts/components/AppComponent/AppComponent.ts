@@ -21,8 +21,9 @@ class AppComponent extends Component {
 
     this.element.innerHTML = `
       <header class="main-header">
-        <img src="img/pokemon-logo.svg"/>
+        <img src="img/pokemon-logo.svg" class="title-image"/>
       </header>
+      <main class="main-container">
         <ul class="pokemon-list">
         </ul>
       </main>

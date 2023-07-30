@@ -6,7 +6,7 @@ class PokemonCardComponent extends Component {
     parentElement: Element,
     private readonly singlePokemon: PokemonProfile
   ) {
-    super(parentElement, "article");
+    super(parentElement, "article", "pokemon");
   }
 
   public render(): void {
