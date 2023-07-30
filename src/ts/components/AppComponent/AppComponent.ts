@@ -5,6 +5,7 @@ import PokemonCardComponent from "../PokemonCardComponent/PokemonCardComponent.j
 
 class AppComponent extends Component {
   private singlePokemon: PokemonProfile[] = [];
+  private readonly next: string;
 
   constructor(parentElement: Element) {
     super(parentElement, "div", "container");
@@ -26,6 +27,11 @@ class AppComponent extends Component {
       <main class="main-container">
         <ul class="pokemon-list">
         </ul>
+      <div class= "buttons">
+        <button class="previous">Previous</button>
+        <span class="counter">0/100</span>
+        <button class="next">Next</button>
+      </div>
       </main>
     `;
   }
@@ -36,6 +42,15 @@ class AppComponent extends Component {
       const pokemonCardListElement = document.createElement("li");
       new PokemonCardComponent(pokemonCardListElement, singlePokemon).render();
       pokemonListElement.append(pokemonCardListElement);
+    });
+  }
+
+  private pageButton(): void {
+    const nextButtonElement = this.element.querySelector(".next")!;
+
+    nextButtonElement.addEventListener("click", async () => {
+      // Const spanElement = this.element.querySelector(".counter")!;
+      // const newPokemonPage = this.element.querySelector(this.next);
     });
   }
 }
